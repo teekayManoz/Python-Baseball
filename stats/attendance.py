@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 from data import games
 
-attendance = games.loc[(games['type'] == 'info' &
-                        games['multi2'] == 'attendance'), ['year', 'multi3']]
+attendance = games.loc[(games['type'] == 'info') &
+                       (games['multi2'] == 'attendance'), ['year', 'multi3']]
 attendance.columns = ['year', 'attendance']
 
 attendance.loc[:, 'attendance'] = pd.to_numeric(
